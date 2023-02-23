@@ -1,12 +1,13 @@
 const controller = require("../controllers/users");
-const routes = require('express').Router();
+const router = require('express').Router();
 
 
 // CRUD Routes /users
 
-routes.get('./', controller.getUsers); // get users
-routes.get("./:userId", controller.getUser); //  /user/:userId
-routes.post('/', controller.createUser); // /users
-routes.put("/:userId", controller.updateUser); // /users/:userId
-routes.delete("/:userId", controller.deleteUser); // /users/:userId
+router.get('./', controller.getUsers); // get users
+router.get("./:userId", controller.getUser); //  /user/:userId
+router.post('/', controller.createUser); // /users
+router.put("/:userId", controller.updateUser); // /users/:userId
+router.delete("/:userId", controller.deleteUser); // /users/:userId
 
+module.exports = router;
